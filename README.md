@@ -59,7 +59,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :group
-- belongs_to :users
+- belongs_to :user
 
 
 ## groups_usersテーブル
@@ -71,4 +71,4 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :group
-- belongs_to :users
+- belongs_to :user
