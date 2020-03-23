@@ -31,9 +31,9 @@ Things you may want to cover:
 |email|text|null: false|
 
 ### Association
-- has_many :group
 - has_many :messages
 - has_many :groups, through: :groups_users
+- has_many :groups_users
 
 
 ## groupsテーブル
@@ -43,9 +43,9 @@ Things you may want to cover:
 |group_name|text|null: false|
 
 ### Association
-- belongs_to :users
 - has_many :messages
 - has_many :users, through: :groups_users
+- has_many :groups_users
 
 
 ## messagesテーブル
