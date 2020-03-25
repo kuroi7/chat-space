@@ -1,0 +1,52 @@
+@mixin sidetextcolor(){
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.side{
+  width: 300px;
+  background-color: #2f3e51;
+}
+.side-header{
+  height: 100px;
+  padding: 0px 20px;
+  background-color: #253141;
+  display: flex ;
+  align-items: center;
+  @include anchorlink();
+  &__box{
+    height: 20px;
+    width: 100%;
+    font-size: 16px;
+    @include sidetextcolor();
+    display: flex;
+    justify-content:space-between;
+    &--name{
+    }
+    &__btn{
+      width: 60px;
+      text-align: right;
+      &--edit{
+        margin-right: 5px;
+      }
+      &--cog{
+      }
+    }
+  }
+}
+
+.groups{
+  padding: 20px 20px 0px;
+  @include anchorlink();
+  &__group{
+    text-decoration: none;
+    @include sidetextcolor();
+    margin-bottom: 40px;
+    &--name{
+      font-size: 15px;
+    }
+    &--message{
+      font-size: 11px;
+    }
+  }
+}
