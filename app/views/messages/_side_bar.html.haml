@@ -1,0 +1,24 @@
+.side
+  .side-header
+    .side-header__box
+      .side-header__box--name
+        kuro
+      .side-header__box__btn
+        = link_to "#", class: "side-header__box__btn--edit" do
+          = icon('far', 'edit')
+        = link_to "#", class: "side-header__box__btn--cog" do
+          = icon('fas', 'cog')
+  .groups
+    .groups__group
+      = link_to "#" do
+        %p.groups__group--name
+          techcamp
+        %p.groups__group--message
+          まだメッセージはありません
+
+    .groups__group
+      = link_to "#" do
+        %p.groups__group--name
+          techcamp
+        %p.groups__group--message
+          まだメッセージはありません

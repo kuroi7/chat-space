@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper{
+  display: flex;
+}
+@mixin anchorlink(){
+  a:link, a:visited, a:hover, a:active {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+@import "side";
+@import "main";
