@@ -11,15 +11,8 @@
   .groups
     - current_user.groups.each do |group|
       .groups__group
-        = link_to "#" do
+        = link_to group_messages_path(group) do
           %p.groups__group--name
             = group.name
           %p.groups__group--message
-            まだメッセージはありません
-
-      -# .groups__group
-      -#   = link_to "#" do
-      -#     %p.groups__group--name
-      -#       techcamp
-      -#     %p.groups__group--message
-      -#       まだメッセージはありません
+            = group.show_last_message
