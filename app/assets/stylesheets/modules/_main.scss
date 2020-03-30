@@ -41,6 +41,7 @@
 .messages{
   padding: 35px 0px 0px 40px;
   height: calc(100vh - 100px - 90px);
+  overflow: scroll;
 }
 .message{
   margin-bottom: 46px;
