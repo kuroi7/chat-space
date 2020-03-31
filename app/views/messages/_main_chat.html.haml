@@ -14,15 +14,6 @@
     .message
       = render @messages
 
-    .message
-      .message__info
-        %p.message__info--name
-          kuro
-        %p.message__info--date
-          2020/03/25(Wed) 12:12:30  
-      %p.message__content
-        おはよう！
-
   .form
     = form_for [@group, @message] do |f|
       .form__box
