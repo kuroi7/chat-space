@@ -37,23 +37,24 @@ $(function() {
       data: { keyword: input },
       dataType: "json"
     })
-      .done(function(users) {
-        $("#user-search-result").empty();
+    .done(function(users) {
+      $("#user-search-result").empty();
 
-        if (users.length !== 0) {
-          users.forEach(function(user) {
-            addUser(user);
-          });
-        } else if (input.length == 0) {
-          return false;
-        } else {
-          addNoUser();
-        }
-      })
-      .fail(function() {
-        alert("通信エラーです。ユーザーが表示できません。");
-      });
+      if (users.length !== 0) {
+        users.forEach(function(user) {
+          addUser(user);
+        });
+      } else if (input.length == 0) {
+        return false;
+      } else {
+        addNoUser();
+      }
+    })
+    .fail(function() {
+      alert("通信エラーです。ユーザーが表示できません。");
+    });
   });
+  
   $(document).on("click", ".chat-group-user__btn--add", function() {
     const userName = $(this).data('user-id');
     const userId = $(this).data('user-id');
