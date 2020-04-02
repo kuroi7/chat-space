@@ -37,6 +37,8 @@
 
 .groups{
   padding: 20px 20px 0px;
+  height: calc(100vh - 100px);
+  overflow: scroll;
   @include anchorlink();
   &__group{
     text-decoration: none;
