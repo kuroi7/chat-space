@@ -39,7 +39,6 @@ $(function() {
     })
     .done(function(users) {
       $("#user-search-result").empty();
-
       if (users.length !== 0) {
         users.forEach(function(user) {
           addUser(user);
@@ -56,7 +55,7 @@ $(function() {
   });
   
   $(document).on("click", ".chat-group-user__btn--add", function() {
-    const userName = $(this).data('user-id');
+    const userName = $(this).data('user-name');
     const userId = $(this).data('user-id');
     $(this)
       .parent()

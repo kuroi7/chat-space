@@ -13,10 +13,10 @@ $(function(){
       <p class="message__content">
       ${message.content}
       </p>
-      
+      <img class="lower-message__image" src=${message.image} ">
       </div>`
       return html;
-      } else {
+    } else {
       var html =`<div class="message" data-message-id= ${message.id} >
       <div class="message__info">
       <p class="message__info--name">
@@ -29,11 +29,10 @@ $(function(){
       <p class="message__content">
       ${message.content}
       </p>
-      
       </div>`
       return html;
-      };
-    }
+    };
+  }
 
 
   $('#new_message').on('submit', function(e){
@@ -85,6 +84,9 @@ $(function(){
     })
     .fail(function() {
       alert('error');
+    })
+    .always(function(){
+      $(".form__box__send-btn").removeAttr("disabled");
     });
   };
   //$(function(){});の閉じタグの直上(処理の最後)に以下のように追記
