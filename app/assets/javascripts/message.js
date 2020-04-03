@@ -55,6 +55,9 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+    })
+    .always(function(){
+      $(".form__box__send-btn").removeAttr("disabled");
     });
   })
   var reloadMessages = function() {
@@ -84,9 +87,6 @@ $(function(){
     })
     .fail(function() {
       alert('error');
-    })
-    .always(function(){
-      $(".form__box__send-btn").removeAttr("disabled");
     });
   };
   //$(function(){});の閉じタグの直上(処理の最後)に以下のように追記
